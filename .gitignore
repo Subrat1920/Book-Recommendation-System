@@ -1,2 +1,10 @@
 venv
 venv/
+.ipynb_checkpoints
+.ipynb_checkpoints/
+.env
+__pycache__
+__pycache__/
+logs
+test.py
+test_read.py
