@@ -11,3 +11,6 @@ test_read.py
 Artifacts/
 Artifacts
 Artifacts
+test_report.txt
+csv_test_report.txt
+db_test.py

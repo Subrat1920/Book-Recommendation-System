@@ -30,11 +30,11 @@ class DataIngestion:
 
             logging.info(f"Successfully loaded {csv_file_path} into {db_path} ({table_name})")
         except Exception as e:
-            logging.error(error_message_details(e, sys))
-            raise RecommenderException(e, sys)
+            logging.error(error_message_details(str(e), sys))
+            raise RecommenderException(str(e), sys)
 
     def initiate_data_ingestion(self):
-        
+            
         try:
             datasets = {
                 "books": ("Notebooks/Datasets/Books.csv", self.book_db_path),
@@ -49,5 +49,5 @@ class DataIngestion:
 
             logging.info("Data Ingestion Pipeline Completed Successfully!")
         except Exception as e:
-            logging.error(error_message_details(e, sys))
-            raise RecommenderException(e, sys)
+            logging.error(error_message_details(str(e), sys))
+            raise RecommenderException(str(e), sys)

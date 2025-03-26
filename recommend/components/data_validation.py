@@ -35,7 +35,7 @@ class DataValidation:
             return df.shape
         except Exception as e:
             logging.error(f"Error reading CSV file {csv_path}: {error_message_details(e, sys)}")
-            raise RecommenderException(e, sys)
+            raise RecommenderException(str(e), sys)
 
     def get_db_shape(self, db_path, table_name):
         """Returns the shape of the table in the SQLite database."""
@@ -52,7 +52,7 @@ class DataValidation:
             return (num_rows, num_cols)
         except Exception as e:
             logging.error(f"Error reading database {db_path}: {error_message_details(e, sys)}")
-            raise RecommenderException(e, sys)
+            raise RecommenderException(str(e), sys)
 
     def validate_data(self):
         """Compares the shapes of CSV and database tables and writes results to a report."""
@@ -82,5 +82,5 @@ class DataValidation:
             logging.info(f"Data validation report generated: {self.report_file_path}")
 
         except Exception as e:
-            logging.error(error_message_details(e, sys))
-            raise RecommenderException(e, sys)
+            logging.error(error_message_details(str(e), sys))
+            raise RecommenderException(str(e), sys)
