@@ -128,7 +128,7 @@ if __name__ == "__main__":
         predictor = BookRecommendationPredictor()
         
         # Get recommendations for a book
-        book_title = "Harry Potter and the Prisoner of Azkaban (Book 3)"
+        book_title = "Exclusive"
         recommended_books = predictor.recommend(book_title)
         
         # Print results
