@@ -22,3 +22,9 @@ DATA VALIDATION
 """
 REPORT_FILE_NAME: str = "report.txt"
 DATA_VALIDATION_FILE_NAME :str = "data_validation"
+
+"""
+DATA TRANSFORMATION
+"""
+DATA_TRANSFORMATION_FILE_NAME: str = "data_transformation"
+""""""

@@ -21,12 +21,10 @@ class DataIngestion:
 
     def read_csv_files(self, csv_file_path, db_path, table_name):
         try:
-            logging.info(f"📥 Loading {csv_file_path} into {db_path} ({table_name})")
-
+            logging.info(f"Loading {csv_file_path} into {db_path} ({table_name})")
 
             df = pd.read_csv(csv_file_path)
 
-            
             with sqlite3.connect(db_path) as conn:
                 df.to_sql(table_name, conn, if_exists="replace", index=False)
 
